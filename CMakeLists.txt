@@ -35,7 +35,7 @@ if	(HAVE_TERMIO_H)
 endif	()
 
 Set(CURSES_NEED_NCURSES TRUE)
-find_package(Curses)
+link_directories(${CURSES_LIB_DIR})
 include_directories(${CURSES_INCLUDE_DIR})
 add_definitions(-DHAVE_NCURSES_H)
 
